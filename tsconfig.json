@@ -20,7 +20,14 @@
     "allowJs": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/controllers/*": ["./src/controllers/*"],
+      "@/models/*": ["./src/models/*"],
+      "@/routes/*": ["./src/routes/*"]
+    }
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "dist"]

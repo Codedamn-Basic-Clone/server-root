@@ -1,5 +1,5 @@
 import expressLoader from "./express";
-import connectDB from "./mongoDB";
+import connectDB from "./mongodb";
 import type { Express } from "express";
 
 export default async function ({ app }: { app: Express }) {

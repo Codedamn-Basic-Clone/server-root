@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 
-const envContent = dotenv.config();
+const APP_ENV: "dev" | "prod" = "dev";
+
+const envContent = dotenv.config({ path: `.env.${APP_ENV}` });
 
 if (envContent.error) {
   throw new Error("Couldn't find .env file");
@@ -17,3 +19,5 @@ export const NODE_ENV = {
     morgan: process.env.MORGAN || "dev",
   },
 };
+
+export const API_VERSION = process.env.API_VERSION || "v1";
